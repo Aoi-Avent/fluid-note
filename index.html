@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0039)https://aoi-avent.github.io/fluid-note/ -->
+<html lang="ja" class="spak-hide-linkpreview"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>Fluid note</title>
 <style>
   html, 
@@ -58,7 +58,7 @@
     cursor: pointer;
   }
 </style>
-</head>
+<style id="hide-scrollbar">* {scrollbar-width: none !important; scrollbar-color: unset !important;} ::-webkit-scrollbar {display: none;}</style></head>
 <body>
 
 <div id="inputArea">
@@ -105,7 +105,7 @@
       if (index < text.length) {
         titleElem.textContent += text.charAt(index);
         index++;
-        setTimeout(nextChar, 130);
+        setTimeout(nextChar, 500);
       } else if (callback) {
         callback();
       }
@@ -131,26 +131,27 @@
 
       if (autoScroll) display.scrollTop = display.scrollHeight;
 
-      let delay = 95;
+      let delay = 220;
         if (char === '\n') {
-          delay = 800; // 改行のスクロールが落ち着くまで100ms追加
+          delay = 1000; // 改行のスクロールが落ち着くまで100ms追加
         } else if (char === '。') {
-          delay = 800; // 句点
+          delay = 3300; // 句点
         } else if (char === '、') {
-          delay = 500; // 読点
+          delay = 1300; // 読点
         } else if (char === '」') {
-          delay = 400; // 読点
+          delay = 800; // 読点
         } else if (char === '？') {
-          delay = 600; // 読点
+          delay = 1000; // 読点
         } else if (char === '　') {
-          delay = 600; // 読点
+          delay = 800; // 読点
         } else if (char === ' ') {
-          delay = 600; // 読点
+          delay = 800; // 読点
         }
 
       setTimeout(showNextChar, delay);
     }
   }
 </script>
-</body>
-</html>
+
+
+</body></html>
